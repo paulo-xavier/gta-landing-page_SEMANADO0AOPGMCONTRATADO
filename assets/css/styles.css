@@ -1,0 +1,107 @@
+body {
+    background-color: #282828;
+    color: #fff;
+}
+
+.header {
+    height: 80px;
+    background-color: #0b0b0b;
+    display: flex;
+    justify-content: space-between; /*Align children horizontally*/
+    align-items: center; /*Align children vertically*/
+    padding: 0 80px;
+    border-bottom: 1px solid #282828;
+}
+
+.header .logo {
+    display: flex;
+    gap: 15px;
+}
+
+.header .menu {
+    display: flex;
+    gap: 30px;
+}
+
+.header .menu li a {
+    padding: 30px;
+    color: #e8e8e8;
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: 'Chalet', sans-serif;
+}
+
+.header .menu li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.home {
+    background-color: aqua;
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 80px); /*Set the same height of the window, discarding the header height which is 80px */    
+}
+
+.home::after { /*Creates a HTML element in CSS*/
+    content: '';
+    position: absolute; /*Removes the element of the original document flow. But it still exists in the HTML. It covers the element.*/
+
+    height: 100%; /*100% of the available space according to the parent height*/
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .7) 35%, transparent 65%);
+}
+
+.home .background-image {
+    width: 100%;
+    object-fit: cover; /*Make the image keep the proportion and fits to the size*/
+}
+
+.home .home-information {
+    position: absolute;
+    z-index: 1;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /*Align the elements vertically because I change the flex-direction to column.*/
+    gap: 32px;
+    padding: 80px 80px 80px 170px;
+    max-width: 780px;
+}
+
+.home .home-information img {
+    max-width: 150px;
+}
+
+.home .home-information .game-list {
+    display: flex;
+    gap: 32px;
+}
+
+.home .home-information .title {
+    font-family: 'ChaletComprime';
+    font-size: 55px;
+}
+
+.home .home-information .text {
+    font-family: 'Chalet';
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn-buy {
+    background-color: rgba(255, 255, 255, .1);
+    border: 0.5px solid #fff;
+    border-radius: 4px;
+    font-family: 'ChaletComprime';
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    width: 50%;
+    transition: all .3s ease-in;
+}
+
+.btn-buy:hover {
+    background-color: #fff;
+    color: #000;
+}

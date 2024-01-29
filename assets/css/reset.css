@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    /*external space of the element*/
+    
+    padding: 0;
+    /*internal space of the element. Distance between the content and its border*/
+
+    box-sizing: border-box;
+    /* Facilitate to work with widths and heights of the elements in CSS. */
+}
+
+ul {
+    list-style: none;
+    /*remove the list style*/
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
