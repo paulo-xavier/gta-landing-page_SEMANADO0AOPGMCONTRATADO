@@ -88,7 +88,8 @@ body {
     line-height: 1.6;
 }
 
-.btn-buy {
+.btn-buy,
+.btn-platform {
     background-color: rgba(255, 255, 255, .1);
     border: 0.5px solid #fff;
     border-radius: 4px;
@@ -101,7 +102,128 @@ body {
     transition: all .3s ease-in;
 }
 
+.btn-platform {
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
 .btn-buy:hover {
     background-color: #fff;
     color: #000;
+}
+
+.buy-now .game-cover {
+    width: 270px;
+}
+
+.buy-now{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    align-items: center; /*align horizontally*/
+}
+
+.buy-now .title {
+    font-family: 'ChaletComprime';
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.buy-now .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    width: 50%;
+    border-radius: 10px;
+    padding: 80px;
+    gap: 40px;
+}
+
+.buy-now .information {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.buy-now .information h3{
+    font-family: 'ChaletComprime';
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.buy-now .information p {
+    color: #e8e8e8;
+    font-family: 'Chalet';
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.buy-now .information .platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.buy-now .btn-platform .platforms {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all .3s ease-in;
+    display: none; /*Hides the element*/
+    opacity: 0; /*Hides the element*/
+}
+
+.buy-now .btn-platform .platforms.active {
+    display: flex;
+    opacity: 1;
+} 
+
+.buy-now .btn-platform .platforms li {
+    padding: 20px;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(1) { /* nth-child(1) style the first li */
+    border: 1px solid #00439c;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(1):hover {
+    background-color: #00439c
+}
+
+.buy-now .btn-platform .platforms li:nth-child(2) { 
+    border: 1px solid #387a26;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(2):hover {
+    background-color: #387a26;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(3) { 
+    border: 1px solid #00439c;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(3):hover {
+    background-color: #00439c;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(4) { 
+    border: 1px solid #387a26;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(4):hover {
+    background-color: #387a26;
+}
+
+.buy-now .btn-platform .platforms li:nth-child(5) { 
+    border: 1px solid #fcaf17; 
+}
+
+.buy-now .btn-platform .platforms li:nth-child(5):hover {
+    background-color: #fcaf17;
 }
